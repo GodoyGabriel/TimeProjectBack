@@ -1,8 +1,9 @@
 
-let express = require('express');
+const express = require('express');
 const router = express.Router();
 const TimeController = require("../controllers/timeController");
+const auth = require('../middleware/auth');
 
-router.get('/time', TimeController.getServerTime);
+router.get('/time',auth.verify ,TimeController.getServerTime);
 
 module.exports = router;

@@ -2,12 +2,12 @@ const logger = require("../utils/logger");
 
 class TimeModel {
   constructor() {
-    super(Model);
     this.time = {
       properties: {
         epoch: {
           description: "The current server time, in epoch seconds, at time of processing the request.",
-          type: "number"
+          type: "number",
+          value: ""
         }
       },
       required: ["epoch"],
@@ -17,8 +17,12 @@ class TimeModel {
   }
   
   getServerTime = async () => {
-
-    return null;
+    this.time.properties.epoch.value = Math.floor(new Date().getTime() / 1000);
+    const response = {
+      status: 200,
+      result: this.time
+    }
+    return response;
   }
 }
 
