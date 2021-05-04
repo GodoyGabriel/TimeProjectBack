@@ -1,0 +1,21 @@
+{
+  "name": "timeprojectback",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index",
+    "dev": "nodemon src/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GodoyGabriel/TimeProjectBack.git"
+  },
+  "author": "Godoy Gabriel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GodoyGabriel/TimeProjectBack/issues"
+  },
+  "homepage": "https://github.com/GodoyGabriel/TimeProjectBack#readme"
+}
